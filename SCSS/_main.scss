@@ -70,21 +70,21 @@
     }
   }
   .item-text {
-    max-width: 555px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 0 100px;
     @media (max-width: 767px) {
       padding: 0 15px;
-      max-width: 100%;
+      width: 93%;
     }
     h2 {
       font-size: $font-l;
       font-weight: bold;
     }
     p {
-      max-width: 350px;
+      max-width: 100%;
       font-size: 20px;
     }
     a {
@@ -95,7 +95,7 @@
     }
   }
   .item-img {
-    max-width: 555px;
+    width: 50%;
     max-height: 555px;
     @media (max-width: 767px) {
       width: 100%;
@@ -112,49 +112,61 @@
       object-position: left;
     }
   }
+  .item-longBox {
+    justify-content: space-between;
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+    li {
+      @media (max-width: 767px) {
+        margin-bottom: 20px;
+      }
+    }
+    .longBox-text {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 100px;
+      @media (max-width: 767px) {
+        padding: 0 15px;
+        width: 93%;
+      }
+      h3 {
+        font-size: $font-m;
+        font-weight: bold;
+      }
+      p {
+        width: 100%;
+      }
+    }
+    .longBox-img {
+      width: 50%;
+      max-height: 1080px;
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+      .longBox-pic {
+        width: 555px;
+        height: 1080px;
+        object-fit: cover;
+        // width: 50%;
+        // display: block;
+        @media (max-width: 767px) {
+          height: 680px;
+        }
+      }
+    }
+  }
 }
 
-.item-longBox {
-  justify-content: space-between;
-  @media (max-width: 767px) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 15px;
-  }
-  li {
-    @media (max-width: 767px) {
-      margin-bottom: 20px;
-    }
-  }
-  .longBox-text {
-    max-width: 555px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 100px;
-    h3 {
-      font-size: $font-m;
-      font-weight: bold;
-    }
-  }
-  .longBox-img {
-    max-width: 555px;
-    max-height: 1080px;
-    .longBox-pic {
-      width: 555px;
-      height: 1080px;
-      object-fit: cover;
-    }
-  }
-}
 .item-btn {
   color: #000000;
   font-size: 20px;
   font-weight: bold;
   border: 2px solid #000000;
   border-radius: 30px;
-  width: 350px;
+  max-width: 350px;
   background-color: transparent;
   padding: 15px 0;
   text-align: center;
@@ -269,6 +281,8 @@
     }
   }
   .news-text {
+    flex-direction: column;
+    justify-content: center;
     max-width: 350px;
     @media (max-width: 767px) {
       width: 100%;

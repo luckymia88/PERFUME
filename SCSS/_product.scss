@@ -22,9 +22,18 @@
       margin-top: 40px;
       padding: 0 15px;
     }
-    li {
-      max-width: 255px;
-
+    .card {
+      position: relative;
+      max-width: 23%;
+      flex: 0 0 23%;
+      @media (max-width: 992px) {
+        max-width: 31%;
+        flex: 0 0 31%;
+      }
+      @media (max-width: 576px) {
+        max-width: 48%;
+        flex: 0 0 48%;
+      }
       h2 {
         font-size: $font-m;
         font-weight: bold;
@@ -44,19 +53,21 @@
 }
 
 .product-img {
-  width: 255px;
-  height: 255px;
   overflow: hidden;
   img {
     width: 100%;
-    height: 100%;
+    height: 255px;
     object-fit: cover;
     object-position: center;
     transition: all 0.5s;
-  }
-  &:hover {
-    transform: scale(1.1);
-    cursor: pointer;
+    display: block;
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+    @media (max-width: 414px) {
+      height: 165px;
+    }
   }
   .img-bottom {
     object-position: bottom;
